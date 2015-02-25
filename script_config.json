@@ -1,0 +1,28 @@
+{
+    "scripts": {
+        "animation": {
+            "keyframes_ui":{"ext":"py", "cmd":"show"},
+            "nudge_transform":{"ext":"py", "cmd":"show", "rel_path":"nudge_transform"},
+            "import_nuke_2d_tracking":{"ext":"py", "cmd":"show"}
+        },
+        "modelling": {
+            "build_pipes":{ "ext":"py", "cmd":"show", "rel_path":"pipe_tool"},
+            "uvs_from_index_ui":{ "ext":"py", "cmd":"show", "rel_path":"uv"}
+        },
+        "rigging": {
+            "tendril_setup_ui":{"ext":"py", "cmd":"show", "rel_path":"tendril_rig"},
+            "cable_setup_ui":{"ext":"py", "cmd":"show", "rel_path":"cable_rig"},
+            "drawing_override":{"ext":"py", "cmd":"show"},
+            "multi_constrain":{"ext":"py", "cmd":"show"},
+            "bb_joints":{"ext":"py", "rel_path":"bb_joints","cmd":"create_joints_from_bb"},
+            "create_ribbon":{"ext":"py", "rel_path":"ribbon","cmd":"show"}
+        },
+        "rendering": {
+            "list_vray_materials":{"ext":"py", "cmd":"show"},
+            "add_vray_attr_ui":{"ext":"py", "rel_path":"vray", "cmd":"show"}
+        },
+         "general": {
+            "filter_view":{"ext":"py", "cmd":"show"}
+        }
+    }
+}
