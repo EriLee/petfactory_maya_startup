@@ -15,7 +15,8 @@
             "drawing_override":{"ext":"py", "cmd":"show"},
             "multi_constrain":{"ext":"py", "cmd":"show"},
             "bb_joints":{"ext":"py", "rel_path":"bb_joints","cmd":"create_joints_from_bb"},
-            "create_ribbon":{"ext":"py", "rel_path":"ribbon","cmd":"show"}
+            "create_ribbon":{"ext":"py", "rel_path":"ribbon","cmd":"show"},
+            "cable_setup_ui":{"ext":"py", "cmd":"show", "rel_path":"cable_rig"}
         },
         "rendering": {
             "list_vray_materials":{"ext":"py", "cmd":"show"},
