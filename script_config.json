@@ -22,7 +22,9 @@
             "add_vray_attr_ui":{"ext":"py", "rel_path":"vray", "cmd":"show"}
         },
          "general": {
-            "filter_view":{"ext":"py", "cmd":"show"}
+            "filter_view":{"ext":"py", "cmd":"show"},
+            "attr_util":{"ext":"py", "cmd":"show_unlock_v"},
+            "attr_util":{"ext":"py", "cmd":"hide_lock_v"}
         }
     }
 }
