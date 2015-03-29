@@ -19,8 +19,9 @@ parent_menu_name = 'Petfactory'
 
 
 def pet_init():
-    script_dict = read_json(os.path.join(script_path, 'script_config.json'))
-    build_petfactory_menu(script_dict)
+    #script_dict = read_json(os.path.join(script_path, 'script_config.json'))
+    #build_petfactory_menu(script_dict)
+    build_petfactory_menu()
 
 def read_json(file_path):
 
@@ -90,10 +91,13 @@ def build_petfactory_menu(script_dict):
 
     cmds.menuItem(p=root_menu, d=1)
 
-
+    script_dict = read_json(os.path.join(script_path, 'script_config.json'))
+    
     # add the custom scripts
     if script_dict:
 
+        petfactory_custom_script_menu(script_dict, root_menu)
+        '''
         category_dict = script_dict.get('scripts')
 
         for category in sorted(category_dict):
@@ -117,5 +121,34 @@ def build_petfactory_menu(script_dict):
                 cmd += '\n{0}.{1}()'.format(module, script_dict[script].get('cmd'))
                 
                 cmds.menuItem(script, parent=script_menuitem, c=cmd, label=script)
+        '''
+
+def petfactory_custom_script_menu(script_dict, parent_menu):
+
+    print('Called: petfactory_custom_script_menu')
+
+    category_dict = script_dict.get('scripts')
+
+    for category in sorted(category_dict):
+
+        script_menuitem = cmds.menuItem(category, p=parent_menu, bld=1, sm=1, to=1, l=category)            
+        script_dict = category_dict[category]
+
+        for script in sorted(script_dict):
+
+            # build the string to be used for the menuItem button command.
+            # the script is imported when the menu item is pressed,
+            # the the cmd specified in the info_dict is called.
+
+            rel_path = script_dict[script].get('rel_path')
+            if rel_path:
+                module = 'petfactory.{0}.{1}.{2}'.format(category, rel_path, script)
+            else:
+                module = 'petfactory.{0}.{1}'.format(category, script)
+            
+            cmd = 'try:\n\texec "import {0}"\n\nexcept ImportError as e:\n\tprint "import error:", e\n'.format(module)
+            cmd += '\n{0}.{1}()'.format(module, script_dict[script].get('cmd'))
+            
+            cmds.menuItem(script, parent=script_menuitem, c=cmd, label=script)
 
 utils.executeDeferred('pet_init()')
