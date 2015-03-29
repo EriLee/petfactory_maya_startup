@@ -1,30 +1,30 @@
 {
     "scripts": {
         "animation": {
-            "keyframes_ui":{"ext":"py", "cmd":"show"},
-            "nudge_transform":{"ext":"py", "cmd":"show", "rel_path":"nudge_transform"},
-            "import_nuke_2d_tracking":{"ext":"py", "cmd":"show"}
+            "keyframes_ui":{"filename":"keyframes_ui", "ext":"py", "cmd":"show"},
+            "nudge_transform":{"filename":"nudge_transform", "ext":"py", "cmd":"show", "rel_path":"nudge_transform"},
+            "import_nuke_2d_tracking":{"filename":"import_nuke_2d_tracking", "ext":"py", "cmd":"show"}
         },
         "modelling": {
-            "build_pipes":{ "ext":"py", "cmd":"show", "rel_path":"pipe_tool"},
-            "uvs_from_index_ui":{ "ext":"py", "cmd":"show", "rel_path":"uv"}
+            "build_pipes":{"filename":"build_pipes", "ext":"py", "cmd":"show", "rel_path":"pipe_tool"},
+            "uvs_from_index_ui":{"filename":"uvs_from_index_ui", "ext":"py", "cmd":"show", "rel_path":"uv"}
         },
         "rigging": {
-            "tendril_setup_ui":{"ext":"py", "cmd":"show", "rel_path":"tendril_rig"},
-            "drawing_override":{"ext":"py", "cmd":"show"},
-            "multi_constrain":{"ext":"py", "cmd":"show"},
-            "bb_joints":{"ext":"py", "rel_path":"bb_joints","cmd":"create_joints_from_bb"},
-            "create_ribbon":{"ext":"py", "rel_path":"ribbon","cmd":"show"},
-            "cable_setup_ui":{"ext":"py", "cmd":"show", "rel_path":"cable_rig"}
+            "tendril_setup_ui":{"filename":"tendril_setup_ui", "ext":"py", "cmd":"show", "rel_path":"tendril_rig"},
+            "drawing_override":{"filename":"drawing_override", "ext":"py", "cmd":"show"},
+            "multi_constrain":{"filename":"multi_constrain", "ext":"py", "cmd":"show"},
+            "bb_joints":{"filename":"bb_joints", "ext":"py", "rel_path":"bb_joints","cmd":"create_joints_from_bb"},
+            "create_ribbon":{"filename":"create_ribbon", "ext":"py", "rel_path":"ribbon","cmd":"show"},
+            "cable_setup_ui":{"filename":"cable_setup_ui", "ext":"py", "cmd":"show", "rel_path":"cable_rig"}
         },
         "rendering": {
-            "list_vray_materials":{"ext":"py", "cmd":"show"},
-            "add_vray_attr_ui":{"ext":"py", "rel_path":"vray", "cmd":"show"}
+            "list_vray_materials":{"filename":"list_vray_materials", "ext":"py", "cmd":"show"},
+            "add_vray_attr_ui":{"filename":"add_vray_attr_ui", "ext":"py", "rel_path":"vray", "cmd":"show"}
         },
          "general": {
-            "filter_view":{"ext":"py", "cmd":"show"},
-            "attr_util":{"ext":"py", "cmd":"show_unlock_v"},
-            "attr_util":{"ext":"py", "cmd":"hide_lock_v"}
+            "filter_view":{"filename":"filter_view", "ext":"py", "cmd":"show"},
+            "show / unlock":{"filename":"attr_util", "ext":"py", "cmd":"show_unlock_v"},
+            "hide / lock":{"filename":"attr_util", "ext":"py", "cmd":"hide_lock_v"}
         }
     }
 }
